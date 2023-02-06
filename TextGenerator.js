@@ -38,8 +38,9 @@ const listGoodSleepingHabits =[
     "Buscar ayuda profesional si se experimentan problemas de sueño persistentes, como insomnio o apnea del sueño."];
 
 
-const ramdomTextItem = (list)=>{
-    let item = Math.floor(Math.random()*10);
+let ramdomTextItem = (list)=>{
+    let item = Math.floor(Math.random()*(list.length));
+    
     return list[item];
 };
 
@@ -47,8 +48,17 @@ const ramdomTextItem = (list)=>{
 
 
 
-const randomText =`sdasdasdas:\n
+let randomText =`
+
+Estos son tus consejos del dia para para buenos habitos de salud:
+
+Unos hábitos alimenticios saludables son claves para tener una vida sana, por lo que hoy te recomendamos: ${ramdomTextItem(listGoodEatingHabits)},
+
+Acompañar tu buena alimentación con un ejercicio saludable te dara mejores resultados, entonces recuerda : ${ramdomTextItem(listGoodExercisePractice)}
+
+Finalmente siempre acompaña estos ejercicios con buen descanso, así que ten en cuenta: ${ramdomTextItem(listGoodSleepingHabits)}`
+
     
     
 
-console.log(randomText); 
+console.log(randomText);
